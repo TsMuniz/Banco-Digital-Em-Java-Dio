@@ -1,6 +1,6 @@
 package Domain;
 
-public class Account {
+public abstract class Account {
   private static final int agencyNumber = 1;
   protected int accountNumber;
   protected Customer customer;
@@ -28,6 +28,7 @@ public class Account {
     return balance -= value;
   }
   public void transfer(Double value, Account destinationAccount) {
-    destinationAccount.deposit(this.withdraw(value));
+    this.withdraw(value);
+    destinationAccount.deposit(value);
   }
 }
