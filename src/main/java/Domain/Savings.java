@@ -6,6 +6,5 @@ public class Savings extends Account{
     super.accountNumber = sequencial++;
     super.customer = customer;
     super.balance = balance;
-
   }
 }
