@@ -4,7 +4,7 @@ public abstract class Account {
   private static final int agencyNumber = 1;
   protected int accountNumber;
   protected Customer customer;
-  protected Double balance;
+  protected Double balance = 0.0;
   public static int getAgencyNumber() {
     return agencyNumber;
   }

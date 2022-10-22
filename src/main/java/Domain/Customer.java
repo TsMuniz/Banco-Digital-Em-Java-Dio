@@ -5,12 +5,12 @@ import java.time.LocalDate;
 public class Customer {
   private String name;
   private String profession;
-  private LocalDate bornDate;
+  private int age;
 
-  public Customer(String name, String profession, LocalDate bornDate) {
+  public Customer(String name, String profession, int age) {
     this.name = name;
     this.profession = profession;
-    this.bornDate = bornDate;
+    this.age = age;
   }
 
   public String getName() {
@@ -21,8 +21,9 @@ public class Customer {
     return profession;
   }
 
-  public LocalDate getBornDate() {
-    return bornDate;
+
+  public int getAge() {
+    return age;
   }
 
   @Override
@@ -30,7 +31,7 @@ public class Customer {
     return "Customer{" +
             "name='" + name + '\'' +
             ", profession='" + profession + '\'' +
-            ", bornDate=" + bornDate +
+            ",age=" + age +
             '}';
   }
 }

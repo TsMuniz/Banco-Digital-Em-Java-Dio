@@ -5,10 +5,18 @@ import java.time.LocalDate;
 public class CheckingAccount extends Account{
 
   private static int sequencial = 1;
-  public CheckingAccount(Domain.Customer customer, Double balance) {
+  public CheckingAccount(Domain.Customer customer) {
     super.accountNumber = sequencial++;
     super.customer = customer;
-    super.balance = balance;
 
+  }
+
+  @Override
+  public String toString() {
+    return "CheckingAccount{" +
+            "accountNumber=" + accountNumber +
+            ", customer=" + customer +
+            ", balance=" + balance +
+            '}';
   }
 }
